@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'api_constants.dart';
+
 class DioHelper {
   static Dio? dio;
   static init() {
@@ -14,20 +15,14 @@ class DioHelper {
       ),
     );
   }
+
   static Future<Response> getData({
     required String endpoint,
     Map<String, dynamic>? queryParameters,
     String? token,
   }) async {
-final res = await dio!.get(
-      endpoint,
-      queryParameters: 
-      queryParameters);
-       
+    final res = await dio!.get(endpoint, queryParameters: queryParameters);
+
     return res;
   }
-}
-
-class ApiConstants {
-  static var baseUrl;
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:goldex/core/constants/app_colors.dart';
+import 'package:goldex/core/routing/routes.dart';
 import 'package:goldex/core/widgets/custom_button.dart';
 
 import '../constants/app_string.dart';
@@ -15,7 +16,9 @@ class HomeScreen extends StatelessWidget {
         children: [
           CustomButton(
             text: APPStrings.gold,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, AppRoutes.goldScreen);
+            },
             color: AppColors.goldColor,
           ),
           SizedBox(height: 15),
