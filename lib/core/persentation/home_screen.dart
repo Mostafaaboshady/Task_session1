@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:goldex/core/constants/app_colors.dart';
-import 'package:goldex/core/routing/routes.dart';
+import 'package:goldex/core/constants/app_string.dart';
+import 'package:goldex/core/routing/routes.dart' show AppRoutes;
 import 'package:goldex/core/widgets/custom_button.dart';
-
-import '../constants/app_string.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -17,14 +16,18 @@ class HomeScreen extends StatelessWidget {
           CustomButton(
             text: APPStrings.gold,
             onPressed: () {
-              Navigator.pushNamed(context, AppRoutes.goldScreen);
+              Navigator.pushNamed(context, AppRoutes.GoldScreen);
+              Colors.white;
             },
             color: AppColors.goldColor,
           ),
-          SizedBox(height: 15),
+          SizedBox(height: 20),
           CustomButton(
             text: APPStrings.silver,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, AppRoutes.SilverScreen);
+              Colors.white;
+            },
             color: AppColors.silverColor,
           ),
         ],

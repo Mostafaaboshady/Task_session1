@@ -3,12 +3,11 @@ import 'package:goldex/core/networking/api_constants.dart';
 import 'package:goldex/core/networking/dio_helper.dart';
 import 'package:goldex/features/gold/data/models/goldmodel.dart';
 
-class Goldrepo {
-  Future<Either<String, Goldmodel>> getgold() async {
+class GoldRepo {
+  Future<Either<String, goldmodel>> getGold() async {
     try {
-      final res = await DioHelper.getData(endpoint: ApiConstants.goldendpoint);
-
-      return Right(Goldmodel.fromJson(res.data));
+      final res = await DioHelper.getData(endpoint: ApiConstants.goldEndpoint);
+      return Right(goldmodel.fromJson(res.data));
     } catch (e) {
       return Left(e.toString());
     }

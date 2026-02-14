@@ -1,18 +1,18 @@
-class goldmodel {
+class  SilverModel {
   String? name;
   double? price;
   String? symbol;
   String? updatedAt;
   String? updatedAtReadable;
 
-  goldmodel(
+  SilverModel(
       {this.name,
       this.price,
       this.symbol,
       this.updatedAt,
       this.updatedAtReadable});
 
-  goldmodel.fromJson(Map<String, dynamic> json) {
+  SilverModel.fromJson(Map<String, dynamic> json) {
     name = json['name'];
     price = json['price'];
     symbol = json['symbol'];
